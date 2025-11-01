@@ -666,3 +666,45 @@ export const SettingsIcon = ({
     />
   </svg>
 );
+
+export const UploadIcon = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}: IconSvgProps) => (
+  <svg
+    width={size || width}
+    height={size || height}
+    viewBox='0 0 24 24'
+    aria-hidden='true'
+    focusable='false'
+    {...props}
+  >
+    <path
+      fill='currentColor'
+      d='M9 16v-6H5l7-7l7 7h-4v6zm-4 4v-2h14v2z'
+    />
+  </svg>
+);
+
+export const DownloadIcon = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}: IconSvgProps) => (
+  <svg
+    width={size || width}
+    height={size || height}
+    viewBox='0 0 24 24'
+    aria-hidden='true'
+    focusable='false'
+    {...props}
+  >
+    <path
+      fill='currentColor'
+      d='M5 20h14v-2H5zm7-18L5.5 9h3.5v6h2V9h3.5z'
+    />
+  </svg>
+);

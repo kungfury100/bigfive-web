@@ -54,84 +54,13 @@ export const languages: Language[] = [
 export const locales = languages.map((lang) => lang.code) as string[];
 
 export const siteConfig = {
-  name: 'Big Five Personality Test',
+  name: 'CSV Personality Comparison',
   creator: '@maccyber',
   description:
-    'Learn to know yourself better with a free, open-source personality test.',
-  navItems: [
-    {
-      label: 'home',
-      href: '/'
-    },
-    {
-      label: 'result',
-      href: '/result'
-    },
-    {
-      label: 'compare',
-      href: '/compare'
-    },
-    {
-      label: 'articles',
-      href: '/articles'
-    },
-    {
-      label: 'about',
-      href: '/about'
-    }
-  ],
-  navMenuItems: [
-    {
-      label: 'home',
-      href: '/'
-    },
-    {
-      label: 'see_results',
-      href: '/result'
-    },
-    {
-      label: 'compare_with',
-      href: '/compare'
-    },
-    {
-      label: 'articles',
-      href: '/articles'
-    },
-    {
-      label: 'privacy',
-      href: '/privacy'
-    },
-    {
-      label: 'about',
-      href: '/about'
-    },
-    {
-      label: 'faq',
-      href: '/faq'
-    }
-  ],
-  footerLinks: [
-    {
-      label: 'home',
-      href: '/'
-    },
-    {
-      label: 'articles',
-      href: '/articles'
-    },
-    {
-      label: 'privacy',
-      href: '/privacy'
-    },
-    {
-      label: 'about',
-      href: '/about'
-    },
-    {
-      label: 'faq',
-      href: '/faq'
-    }
-  ],
+    'Compare personality data by uploading CSV files with detailed breakdowns.',
+  navItems: [],
+  navMenuItems: [],
+  footerLinks: [],
   links: {
     github: 'https://github.com/rubynor/bigfive-web',
     twitter: 'https://twitter.com/rubynor',
@@ -147,9 +76,6 @@ export const getNavItems = async ({
   locale: string;
   linkType: 'navItems' | 'navMenuItems' | 'footerLinks';
 }) => {
-  const t = await getTranslations({ locale, namespace: 'toolbar' });
-  return siteConfig[linkType].map((link) => ({
-    label: t(`${link.label}`),
-    href: link.href
-  }));
+  // Return empty arrays for all nav items - we only want CSV functionality
+  return [];
 };
